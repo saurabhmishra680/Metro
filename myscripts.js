@@ -21,6 +21,6 @@ document.querySelector('.next').addEventListener('click', () => {
 });
 
 // Optional: Auto-slide every 5 seconds
-setInterval(() => {
-    showSlides(1);
-}, 5000);
+// setInterval(() => {
+//     showSlides(1);
+// }, 5000);
