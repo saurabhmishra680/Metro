@@ -93,12 +93,32 @@ footer {
 
 /* Media Queries for smaller screens (mobile) */
 @media (max-width: 768px) {
+    /* Disable slider layout and allow scrolling */
     .slider {
-        height: calc(80vh - 120px); /* Adjust slider height for smaller screens */
+        height: auto; /* Allow the slider height to adjust based on content */
+        display: block; /* Change from flex to block to stack images */
+    }
+
+    .slides {
+        display: block; /* Images stack vertically instead of sliding horizontally */
+        width: 100%;    /* Ensure full width */
+        transition: none;
+        transform: none;
+    }
+
+    .slide-item {
+        margin-bottom: 20px; /* Add some space between images */
+        width: 100%;         /* Ensure each image takes full width */
     }
 
     .slides img {
-        object-fit: contain; /* Ensures full image is visible even on smaller screens */
-        max-height: 80vh; /* Ensure the image doesn't take up too much height on mobile */
+        object-fit: contain; /* Maintain aspect ratio */
+        width: 100%;         /* Ensure the image fits the screen width */
+        height: auto;        /* Adjust height automatically to maintain aspect ratio */
+    }
+
+    /* Hide navigation buttons on mobile */
+    .prev, .next {
+        display: none;
     }
 }
