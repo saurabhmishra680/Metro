@@ -20,7 +20,9 @@ document.querySelector('.next').addEventListener('click', () => {
     showSlides(1);
 });
 
-// Optional: Auto-slide every 5 seconds
-// setInterval(() => {
-//     showSlides(1);
-// }, 5000);
+if (window.innerWidth > 768) {
+    setInterval(() => {
+        showSlides(1);  // Move to the next slide every 5 seconds
+    }, 5000);
+}
+
